@@ -18,8 +18,50 @@ import calculadoraGUI.ICalculadora;
  * @see calculadoraGUI.ICalculadora
  */
 public class AdaptadorOperacionesCalculadoraGUI implements ICalculadora {
-
-
+   
+	private OperacionesCalculadora operaciones;
+	
+	public AdaptadorOperacionesCalculadoraGUI() {
+		operaciones = new OperacionesCalculadora();
+	}
+	
+	public double sumar(double operando1, double operando2) {
+		return operaciones.implementacionSumar(operando1, operando2);
+		
+	}
+	
+    public double restar(double operando1, double operando2) {
+    	return operaciones.implementacionRestar(operando1, operando2);
+		
+	}
+    
+    public double multiplicar(double operando1, double operando2) {
+		return operaciones.implementacionMultiplicar(operando1, operando2);
+	}
+    
+    public double dividir(double operando1, double operando2) {
+		return operaciones.implementacionDividir(operando1, operando2);
+	}
+	
+    public double obtenerUltimoResultado() {
+    	return operaciones.implementacionUR();
+    }
+     
+    public void memoriaLimpiar() {
+    	operaciones.implementacionML();
+    }
+    
+    public void memoriaAniadir() {
+    	operaciones.implementacionMA();
+    }
+    
+    public double memoriaObtener() {
+    	return operaciones.implementacionMO();
+    }
+    
+    public double raizCuadrada(double operando) {
+    	return operaciones.implementacionRaizCuadrada(operando);
+    }
 
 
 }

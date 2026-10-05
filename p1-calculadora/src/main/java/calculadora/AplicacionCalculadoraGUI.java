@@ -22,7 +22,11 @@ public class AplicacionCalculadoraGUI {
 	public static void main(String[] args) {
 
 		// Implementar aquí lo que se necesite.
-	
+	    // OperacionesCalculadora operaciones = new OperacionesCalculadora();
+	     AdaptadorOperacionesCalculadoraGUI adaptador = new AdaptadorOperacionesCalculadoraGUI();
+	     CalculadoraGUI calculadora = new CalculadoraGUI(adaptador);
+	     calculadora.setVisible(true);
 	}
+	
 
 }

@@ -17,5 +17,52 @@ public class OperacionesCalculadora {
 
 	// Realizar aquí la implementación de los métodos correspondientes a cada
 	// operación de la calculadora, siguiendo las indicaciones del enunciado.
+	private double memoria ;
+    private double ultimoResultado;
+	
+	
+	public OperacionesCalculadora() {
+		 memoria = 0;
+		 ultimoResultado = 0;
+		
+	}
+	
+	public double implementacionSumar(double operando1, double operando2) {
+		return ultimoResultado = operando1 + operando2;
+		
+	}
+	
+    public double implementacionRestar(double operando1, double operando2) {
+    	return ultimoResultado = operando1-operando2;
+		
+	}
+     
+    public double implementacionMultiplicar(double operando1, double operando2) {
+    	return ultimoResultado = operando1*operando2;
+    }
+    
+    public double implementacionDividir(double operando1, double operando2) {
+    	return ultimoResultado = operando1/operando2;
+    }
+    
+    public double  implementacionUR() {
+    	return ultimoResultado;
+    }
+    
+    public void implementacionML() {
+    	memoria = 0;
+    }
+    
+    public void implementacionMA() {
+    	memoria = memoria + ultimoResultado;
+    }
+    
+    public double  implementacionMO() {
+    	return memoria;
+    }
+    
+   public double implementacionRaizCuadrada(double operando){
+    	return ultimoResultado = Math.sqrt(operando);
+    }
 
 }
