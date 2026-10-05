@@ -7,14 +7,34 @@
 
 syntax = "proto3"; 
 package stubCalculadora; 
+import "google/protobuf/empty.proto";
 
 
 // Escribir aquí los mensajes de entrada y salida de los procedimientos del servicio.
+
+message Operandos{
+ double operando = 1;
+ double operando = 2;
+}
+
+message Resultado{
+   double valor = 1;
+}
 
 
 service ServicioCalculadora { 
 
 // Escribir aquí los procedimientos del servicio.
+
+  rpc sumar (Operandos) returns (Resultado);
+  rpc restar (Operandos) returns (Resultado);
+  rpc multiplicar (Operandos) returns (Resultado);
+  rpc dividir (Operandos) returns (Resultado);
+  rpc raizCuadrada (Operandos) returns (Resultado);
+  
+  rpc memoriaAniadir (google.protobuf.empty) returns (Resultado);
+  rpc memoriaLimpiar (google.protobuf.empty) returns (Resultado);
+  
 
 }
 
