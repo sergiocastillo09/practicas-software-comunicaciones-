@@ -42,7 +42,15 @@ public class OperacionesCalculadora {
     }
     
     public double implementacionDividir(double operando1, double operando2) {
-    	return ultimoResultado = operando1/operando2;
+    	
+    	if (operando1 == 0 && operando2 == 0) {
+    		
+    		 throw new IllegalArgumentException("Indeterminacion");
+    		
+    	}else {
+    		return ultimoResultado = operando1/operando2;
+    	}
+    		
     }
     
     public double  implementacionUR() {
