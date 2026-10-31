@@ -1,0 +1,56 @@
+/* Software de Comunicaciones - Prácticas de la asignatura
+ * DTE, ETSIST, UPM
+ * Curso 2026/2027
+ * Práctica 1, fase 2
+ * Archivo: calculadora.proto
+ */
+
+syntax = "proto3"; 
+package stubCalculadora; 
+import "google/protobuf/empty.proto";
+
+
+// Escribir aquí los mensajes de entrada y salida de los procedimientos del servicio.
+
+message RespuestaIdSesion{
+ int32 sessionId = 1;
+}
+
+message Operandos{
+ int32 sessionId = 1;
+ double operando1 = 2;
+ double operando2 = 3;
+ 
+}
+
+message PeticionSesion{
+ int32 sessionId = 1;
+}
+
+message Resultado{
+   double valor = 1;
+}
+
+
+
+
+service ServicioCalculadora { 
+
+// Escribir aquí los procedimientos del servicio.
+
+  rpc obtenerIdSesion(google.protobuf.Empty) returns (RespuestaIdSesion);
+
+  rpc sumar (Operandos) returns (Resultado);
+  rpc restar (Operandos) returns (Resultado);
+  rpc multiplicar (Operandos) returns (Resultado);
+  rpc dividir (Operandos) returns (Resultado);
+  rpc raizCuadrada (Operandos) returns (Resultado);
+  
+  rpc memoriaAniadir (PeticionSesion) returns (google.protobuf.Empty);
+  rpc memoriaLimpiar (PeticionSesion) returns (google.protobuf.Empty);
+  rpc obtenerUltimoResultado(PeticionSesion) returns (Resultado);
+  rpc memoriaObtener(PeticionSesion) returns (Resultado);
+  
+
+}
+

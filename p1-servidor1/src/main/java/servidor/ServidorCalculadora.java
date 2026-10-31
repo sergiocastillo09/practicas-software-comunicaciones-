@@ -1,8 +1,22 @@
 /* Software de Comunicaciones - Prácticas de la asignatura
+
  * DTE, ETSIST, UPM
  * Curso 2026/2027
  * Práctica 1, fases 2 y 3
  * Archivo: ServidorCalculadora.java
+ */
+
+/* 
+ * PREGUNTA 1: ¿Qué ocurre cuando el segundo cliente intenta solicitar operaciones remotas?
+ * Respuesta: El servidor atiende la solicitud del segundo cliente de manera simultánea y concurrente 
+ * con el primero, procesando la operación y devolviendo el resultado correcto a su interfaz gráfica 
+ * sin que ninguna de las dos instancias de cliente sufra bloqueos o interferencias.
+ *
+ * PREGUNTA 2: ¿Por qué ocurre eso?
+ * Respuesta: Esto ocurre gracias a la arquitectura multiproceso y multihilo del modelo de transporte 
+ * subyacente de gRPC (basado en Netty), el cual gestiona un pool de hilos capaz de aceptar conexiones 
+ * y despachar llamadas a métodos remotos de forma asíncrona e independiente para cada canal de cliente 
+ * establecido.
  */
 
 package servidor;

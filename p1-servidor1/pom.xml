@@ -35,6 +35,11 @@
 			<artifactId>p1-cliente1</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>es.upm.dte.softcom</groupId>
+			<artifactId>p1-calculadora</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<extensions>
