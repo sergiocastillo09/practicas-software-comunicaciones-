@@ -21,6 +21,10 @@ public class ClienteCalculadoraGUI {
 	public static void main(String[] args) {
 
 		// Implementar aquí lo que se necesite.
+		
+		CalculadoraGUI calculadora = new CalculadoraGUI(new AdaptadorOperacionesCalculadoraGUI());
+		calculadora.setVisible(true);
+		
 	
 	}
 }
